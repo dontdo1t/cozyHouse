@@ -1,0 +1,20 @@
+.our-friends {
+    background-color: #f6f6f6;
+    padding: 70px 0;
+
+    &__caption {
+        text-align: center;
+        margin-bottom: 60px;
+        max-width: 420px;
+        margin: 0 auto;
+    }
+
+    &__wrap {
+        margin-bottom: 60px;
+    }
+
+    &__btn {
+        width: 265px;
+        margin: 0 auto;
+    }
+}

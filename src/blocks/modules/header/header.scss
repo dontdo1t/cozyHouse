@@ -1,0 +1,64 @@
+.header {
+    padding: 46px 0;
+    
+    &__nav-list {
+        display: flex;
+    }
+    
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    &__logo-link {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    &__logo-title {
+        color: $beige;
+        font-size: 32px;
+        letter-spacing: 1.9px
+    }
+    
+    &__logo-text {
+        color: $white;
+        font-size: 13px;
+        font-family: $second-font;
+        letter-spacing: 1.45px;
+    }
+    
+    &__nav-item {
+        
+        a {
+            color: #cdcdcd;
+            font-family: $second-font;
+            margin-left: 37px;
+            position: relative;
+            
+            &:before {
+                position: absolute;
+                content: '';
+                width: 0;
+                height: 2px;
+                background-color: $white;
+                left: 0;
+                bottom: -8px;
+                transition: all .3s;
+            }
+
+            &:hover:before {
+                width: 100%;
+            }
+
+            &:hover {
+                color: $white;
+            }
+        }
+    }
+    
+    &__nav {
+        display: flex;
+        align-items: center;
+    }   
+}

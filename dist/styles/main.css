@@ -213,6 +213,10 @@ select {
   display: flex;
 }
 
+.header__nav-list li {
+  margin-left: 37px;
+}
+
 .header__wrap {
   display: flex;
   justify-content: space-between;
@@ -239,7 +243,6 @@ select {
 .header__nav-item a {
   color: #cdcdcd;
   font-family: Arial, sans-serif;
-  margin-left: 37px;
   position: relative;
 }
 

@@ -1,11 +1,49 @@
 .header {
-    padding: 46px 0;
+    padding: 48px 0;
     
     &__nav-list {
         display: flex;
 
         li {
             margin-left: 37px;
+            @include b(tablet) {
+                margin-left: 0;
+            }
+        }
+        @include b(tablet) {
+            display: table-cell;
+            vertical-align: middle;
+        }
+    }
+
+    &__btn-menu {
+        display: none;
+        float: right;
+        width: 16px;
+        height: 12px;
+        margin-top: 12px;
+        position: relative;
+        left: 0;
+        top: 0;
+
+        span {
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: #fff;
+            transition: all .3s;
+
+        }
+
+        :nth-child(2) {
+            top: 5px;
+        }
+
+        :nth-child(3) {
+            top: 10px;
+        }
+        @include b(tablet) {
+            display: block;
         }
     }
     
@@ -33,7 +71,6 @@
     }
     
     &__nav-item {
-        
         a {
             color: #cdcdcd;
             font-family: $second-font;
@@ -57,11 +94,47 @@
             &:hover {
                 color: $white;
             }
+            @include b(tablet) {
+                color: #000;
+                font-size: 28px;
+                &:hover {
+                    color: #000;
+                }
+            }
+        }
+        @include b(tablet) {
+            display: block;
+            text-align: center;
+            padding: 0 15px 20px;
+            width: 100%;
         }
     }
     
-    &__nav {
+    &__nav__wrap {
         display: flex;
         align-items: center;
-    }   
+        @include b(tablet) {
+            position: fixed;
+            z-index: 10;
+            background-color: #fff;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            overflow: auto;
+            display: none;
+        }
+    }
+
+    @include b(tablet) {
+        &__nav {
+            display: table;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+        }
+    }
 }

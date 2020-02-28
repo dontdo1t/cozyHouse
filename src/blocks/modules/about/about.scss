@@ -1,0 +1,45 @@
+.about {
+    padding: 91px 0 80px;
+    @include b(mobile) {
+        padding: 20px 0;
+    }
+
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 845px;
+        margin: 0 auto;
+        @include b(mobile) {
+            display: block;
+            text-align: center;
+        }
+    }
+
+    &__right {
+        max-width: 423px;
+        margin-bottom: 12px;
+        @include b(mobile) {
+            max-width: 100%;
+            text-align: center;
+        }
+    }
+
+    &__caption {
+        max-width: 315px;
+        margin-bottom: 27px;
+        @include b(mobile) {
+            max-width: 100%;
+        }
+    }
+
+    &__descr {
+        font-family: $second-font;
+        color: $grey-text;
+        letter-spacing: -0.2px;
+
+        :nth-child(1) {
+            margin-bottom: 24px;
+        }
+    }
+}

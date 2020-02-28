@@ -2,9 +2,13 @@
     min-height: 100vh;
     background-size: cover;
     background-position: 50% 50%;
+    padding-bottom: 18px;
+    @include b(tablet) {
+        background-position: 10% 50%;
+    }
 
     &__wrap {
-        min-height: calc(100vh - 191px);
+        min-height: calc(100vh - 167px);
         align-items: center;
         display: flex;
         padding: 40px 0;
@@ -12,6 +16,7 @@
 
     &__inner {
         max-width: 455px;
+        margin-bottom: 65px;
     }
 
     &__caption {
@@ -23,6 +28,9 @@
         max-width: 360px;
         color: $white;
         margin-bottom: 28px;
+        @include b(tablet) {
+            font-size: 35px;
+        }
     }
 
     &__descr {
@@ -34,19 +42,5 @@
 
     &__btn {
         width: 205px;
-    }
-}
-
-@media (max-width: 768px) {
-    .heading {
-        background-position: 15% 50%;
-        
-        &__wrap {
-            min-height: calc(100vh - 120px);
-        }
-    }
-
-    &__caption {
-        font-size: 35px;
     }
 }

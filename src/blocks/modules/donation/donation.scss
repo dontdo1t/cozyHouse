@@ -11,8 +11,7 @@
     }
 
     &__img {
-        width: 50%;
-        padding-right: 40px;
+        width: 43%;
         @include b(mobile) {
             width: 100%;
             max-width: 400px;
@@ -26,12 +25,14 @@
     }
 
     &__info {
-        width: 50%;
-        max-width: 385px;
+        width: 57%;
+        max-width: 440px;
+        padding-left: 81px;
         @include b(mobile) {
             width: 100%;
             max-width: 100%;
             text-align: center;
+            padding-left: 0;
         }
     }
 

@@ -51,6 +51,9 @@
             width: 38px;
             height: 38px;
             margin-right: 24px;
+            @include b(mobile) {
+                margin-right: 7px;
+            }
         }
         @include b(mobile) {
             justify-content: center;

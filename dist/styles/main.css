@@ -228,6 +228,20 @@ select {
   top: 0;
 }
 
+.header__btn-menu.active :nth-child(1) {
+  transform: rotate(-45deg);
+  top: 4px;
+}
+
+.header__btn-menu.active :nth-child(2) {
+  opacity: 0;
+}
+
+.header__btn-menu.active :nth-child(3) {
+  transform: rotate(45deg);
+  top: 4px;
+}
+
 .header__btn-menu span {
   position: absolute;
   width: 100%;
@@ -547,8 +561,7 @@ select {
 }
 
 .donation__img {
-  width: 50%;
-  padding-right: 40px;
+  width: 43%;
 }
 
 .donation__img img {
@@ -556,8 +569,9 @@ select {
 }
 
 .donation__info {
-  width: 50%;
-  max-width: 385px;
+  width: 57%;
+  max-width: 440px;
+  padding-left: 81px;
 }
 
 .donation__caption {
@@ -811,6 +825,7 @@ select {
     width: 100%;
     max-width: 100%;
     text-align: center;
+    padding-left: 0;
   }
 
   .donation__card {
@@ -828,6 +843,10 @@ select {
 
   .footer__item {
     margin-bottom: 0;
+  }
+
+  .footer__item img {
+    margin-right: 7px;
   }
 
   .footer__item {

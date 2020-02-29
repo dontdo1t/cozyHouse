@@ -261,6 +261,7 @@ select {
 .header__wrap {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .header__logo-link {
@@ -382,6 +383,13 @@ select {
 
 .about__descr :nth-child(1) {
   margin-bottom: 24px;
+}
+
+.about__img img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .our-friends {
@@ -565,7 +573,10 @@ select {
 }
 
 .donation__img img {
-  width: 100%;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .donation__info {
@@ -687,6 +698,10 @@ select {
   }
 
   .header__btn-menu {
+    margin-top: 0;
+  }
+
+  .header__btn-menu {
     display: block;
   }
 
@@ -794,6 +809,10 @@ select {
     max-width: 100%;
   }
 
+  .about__img {
+    margin-bottom: 15px;
+  }
+
   .our-friends__item {
     width: 50%;
   }
@@ -807,7 +826,15 @@ select {
   }
 
   .info__item {
-    width: auto;
+    width: 33.33%;
+  }
+
+  .info__item img {
+    margin-bottom: 0;
+  }
+
+  .info__text {
+    font-size: 17px;
   }
 
   .donation__wrap {
@@ -842,7 +869,7 @@ select {
   }
 
   .footer__item {
-    margin-bottom: 0;
+    margin-bottom: 12px;
   }
 
   .footer__item img {
@@ -873,6 +900,17 @@ select {
 
   .our-friends__item:nth-child(2) {
     display: none;
+  }
+}
+
+@media (max-width: 479px) {
+  .info__item {
+    width: 50%;
+    margin-bottom: 15px;
+  }
+
+  .info__text {
+    font-size: 15px;
   }
 }
 

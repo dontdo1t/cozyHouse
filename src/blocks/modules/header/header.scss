@@ -25,6 +25,9 @@
         position: relative;
         left: 0;
         top: 0;
+        @include b(tablet) {
+            margin-top: 0;
+        }
 
         &.active {
             :nth-child(1) {
@@ -70,6 +73,7 @@
     &__wrap {
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
     
     &__logo-link {

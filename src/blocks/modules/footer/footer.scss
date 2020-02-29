@@ -39,7 +39,7 @@
         align-items: center;
         display: flex;
         @include b(mobile) {
-            margin-bottom: 0;
+            margin-bottom: 12px;
         }
         
         a {

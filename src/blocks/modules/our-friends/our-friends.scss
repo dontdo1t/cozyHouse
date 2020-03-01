@@ -59,6 +59,7 @@
         border-radius: 50%;
         position: relative;
         cursor: pointer;
+        @include trs;
 
         &:before {
             content: '';
@@ -78,6 +79,10 @@
             border-right: 4px solid $black;
             left: 10px;
             top: 18px;
+        }
+
+        &:hover {
+            background-color: $beige;
         }
     }
 

@@ -1,0 +1,47 @@
+.pets {
+    background-color: #f6f6f6;
+    padding: 65px 0;
+    @include b(tablet) {
+        padding: 40px 0;
+    }
+    
+    &__outer {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -13px 29px;
+        justify-content: center;
+        align-items: center;
+        @include b(tablet) {
+            margin-bottom: 15px;
+        }
+        @include b(mobile) {
+            margin: 0 20px;
+        }
+    }
+
+    &__item {
+        width: 25%;
+        padding: 0 13px;
+        margin-bottom: 30px;
+        @include b(tablet) {
+            width: 33.33%;
+        }
+        @include b(mobile) {
+            width: 50%;
+            padding: 0 20px;
+        }
+        @include b(479) {
+            width: 100%;
+        }
+    }
+
+    &__caption {
+        max-width: 420px;
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 58px;
+        @include b(tablet) {
+            margin-bottom: 25px;
+        }
+    }
+}

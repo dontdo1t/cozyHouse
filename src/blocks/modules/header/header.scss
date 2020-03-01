@@ -25,6 +25,7 @@
         position: relative;
         left: 0;
         top: 0;
+        @include trs;
         @include b(tablet) {
             margin-top: 0;
         }
@@ -159,6 +160,38 @@
             top: 0;
             bottom: 0;
             right: 0;
+        }
+    }
+
+    &--white-bg {
+        background-color: #fafafa;
+        padding: 18px 0;
+
+        .header {
+
+
+            &__logo-title {
+                color: $main-color;
+            }
+
+            &__nav-item {
+                a {
+                    color: $main-color;
+                    &:before {
+                        background-color: $beige;
+                    }
+                }
+            }
+
+            &__logo-text {
+                color: $black;
+            }
+
+            &__btn-menu {
+                span {
+                    background-color: $main-color;
+                }
+            }
         }
     }
 }

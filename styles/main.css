@@ -58,6 +58,10 @@ a {
 
 .wrapper {
   overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .caption {
@@ -226,6 +230,7 @@ select {
   position: relative;
   left: 0;
   top: 0;
+  transition: all .3s;
 }
 
 .header__btn-menu.active :nth-child(1) {
@@ -310,6 +315,31 @@ select {
 .header__nav__wrap {
   display: flex;
   align-items: center;
+}
+
+.header--white-bg {
+  background-color: #fafafa;
+  padding: 18px 0;
+}
+
+.header--white-bg .header__logo-title {
+  color: #545454;
+}
+
+.header--white-bg .header__nav-item a {
+  color: #545454;
+}
+
+.header--white-bg .header__nav-item a:before {
+  background-color: #f1cdb3;
+}
+
+.header--white-bg .header__logo-text {
+  color: #292929;
+}
+
+.header--white-bg .header__btn-menu span {
+  background-color: #545454;
 }
 
 .heading {
@@ -431,6 +461,7 @@ select {
   border-radius: 50%;
   position: relative;
   cursor: pointer;
+  transition: all .3s;
 }
 
 .our-friends__btn--arrow:before {
@@ -451,6 +482,10 @@ select {
   border-right: 4px solid #292929;
   left: 10px;
   top: 18px;
+}
+
+.our-friends__btn--arrow:hover {
+  background-color: #f1cdb3;
 }
 
 .our-friends__btn--prev {
@@ -640,6 +675,244 @@ select {
   letter-spacing: .2px;
 }
 
+.pagination__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 -8px;
+}
+
+.pagination__item {
+  padding: 0 8px;
+}
+
+.pagination__item a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border: 2px solid #f1cdb3;
+  border-radius: 50%;
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  color: #292929;
+}
+
+.pagination__item a.active {
+  background-color: #f1cdb3;
+  pointer-events: none;
+}
+
+.pagination__item a.dots {
+  pointer-events: none;
+  border: none;
+  background-color: #f1cdb3;
+  border-radius: 50%;
+  width: 5px;
+  height: 5px;
+  font-size: 0;
+  margin: 0 4px;
+  position: relative;
+}
+
+.pagination__item a.dots:before,
+.pagination__item a.dots:after {
+  position: absolute;
+  content: '';
+  background-color: #f1cdb3;
+  border-radius: 50%;
+  width: 5px;
+  height: 5px;
+  top: 0;
+}
+
+.pagination__item a.dots:after {
+  right: -9px;
+}
+
+.pagination__item a.dots:before {
+  left: -9px;
+}
+
+.pagination__item a:hover {
+  background-color: #f1cdb3;
+}
+
+.modal {
+  background-color: #fafafa;
+  position: fixed;
+  z-index: 99;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  top: -100%;
+  transition: all .3s;
+}
+
+.modal.active {
+  top: 0;
+}
+
+.modal.active .modal__img {
+  transform: scale(1);
+}
+
+.modal.active .modal__name {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.modal__outer {
+  min-height: 100vh;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.modal__wrap {
+  max-width: 1028px;
+  padding: 58px 58px 0 0;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.modal__close-btn {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #f1cdb3;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.modal__close-btn:before,
+.modal__close-btn:after {
+  content: '';
+  width: 18px;
+  height: 2px;
+  top: 22px;
+  right: 14px;
+  background-color: #292929;
+  position: absolute;
+  transform: rotate(45deg);
+}
+
+.modal__close-btn:after {
+  transform: rotate(-45deg);
+}
+
+.modal__close-btn:hover {
+  background-color: #f1cdb3;
+}
+
+.modal__content {
+  box-shadow: 0 2px 30px 5px rgba(13, 13, 13, 0.04);
+  background-color: #fafafa;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+}
+
+.modal__img {
+  width: 51.3%;
+  transform: scale(0);
+  transition: all 2s;
+}
+
+.modal__img img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+}
+
+.modal__info {
+  width: 48.7%;
+  padding-left: 30px;
+}
+
+.modal__name {
+  display: block;
+  transform: translateY(50px);
+  opacity: 0;
+  transition: all 1s;
+}
+
+.modal__type {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 20px;
+  letter-spacing: 1.2px;
+}
+
+.modal__descr {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  font-size: 15px;
+  margin-bottom: 14px;
+  letter-spacing: -0.2px;
+  max-width: 90%;
+}
+
+.modal__item {
+  padding-left: 12px;
+  font-size: 17px;
+  position: relative;
+  line-height: 1.85;
+  letter-spacing: 1px;
+}
+
+.modal__item:before {
+  position: absolute;
+  content: '';
+  left: 0;
+  top: 14px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #f1cdb3;
+}
+
+.modal__item span {
+  font-size: 15px;
+  font-family: Arial, sans-serif;
+}
+
+.pets {
+  background-color: #f6f6f6;
+  padding: 65px 0;
+}
+
+.pets__outer {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -13px 29px;
+  justify-content: center;
+  align-items: center;
+}
+
+.pets__item {
+  width: 25%;
+  padding: 0 13px;
+  margin-bottom: 30px;
+}
+
+.pets__caption {
+  max-width: 420px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 58px;
+}
+
 .footer {
   background-size: cover;
   background-position: 50% 50%;
@@ -772,6 +1045,31 @@ select {
     right: 25px;
     z-index: 1;
   }
+
+  .modal__wrap {
+    padding: 0;
+  }
+
+  .modal__close-btn {
+    top: 10px;
+    right: 10px;
+  }
+
+  .pets {
+    padding: 40px 0;
+  }
+
+  .pets__outer {
+    margin-bottom: 15px;
+  }
+
+  .pets__item {
+    width: 33.33%;
+  }
+
+  .pets__caption {
+    margin-bottom: 25px;
+  }
 }
 
 @media (max-width: 940px) {
@@ -859,6 +1157,33 @@ select {
     justify-content: center;
   }
 
+  .modal__content {
+    display: block;
+  }
+
+  .modal__img {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .modal__info {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .modal__descr {
+    max-width: 100%;
+  }
+
+  .pets__outer {
+    margin: 0 20px;
+  }
+
+  .pets__item {
+    width: 50%;
+    padding: 0 20px;
+  }
+
   .footer {
     padding: 20px 0;
   }
@@ -911,6 +1236,16 @@ select {
 
   .info__text {
     font-size: 15px;
+  }
+
+  .pagination__item a {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .pets__item {
+    width: 100%;
   }
 }
 

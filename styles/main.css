@@ -746,9 +746,6 @@ select {
   right: 0;
   bottom: 0;
   overflow: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   height: 100vh;
   width: 100%;
   top: -100%;
@@ -773,6 +770,7 @@ select {
   padding: 15px;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .modal__wrap {

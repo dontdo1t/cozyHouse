@@ -53,6 +53,7 @@
         top: 0;
         right: 0;
         cursor: pointer;
+        z-index: 100;
         @include trs;
         @include b(tablet) {
             top: 10px;
@@ -88,6 +89,7 @@
         align-items: center;
         @include b(mobile) {
             display: block;
+            padding: 10px;
         }
     }
 

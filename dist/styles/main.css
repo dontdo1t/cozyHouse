@@ -789,6 +789,7 @@ select {
   top: 0;
   right: 0;
   cursor: pointer;
+  z-index: 100;
   transition: all .3s;
 }
 
@@ -1157,6 +1158,7 @@ select {
 
   .modal__content {
     display: block;
+    padding: 10px;
   }
 
   .modal__img {
@@ -1174,7 +1176,7 @@ select {
   }
 
   .pets__outer {
-    margin: 0 20px;
+    margin: 0 -20px;
   }
 
   .pets__item {
